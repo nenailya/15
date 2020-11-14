@@ -14,33 +14,47 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static sample.smth.fooForEachCell;
 import static sample.smth.*;
-
-
 
 public class Controller {
     @FXML
     GridPane gridPane;
 
-    public void  cell1(MouseEvent mouseEvent) { fooForEachCell(0, 0);updateUI(); }
-    public void  cell2(MouseEvent mouseEvent) { fooForEachCell(0, 1);updateUI(); }
-    public void  cell3(MouseEvent mouseEvent) { fooForEachCell(0, 2);updateUI(); }
-    public void  cell4(MouseEvent mouseEvent) { fooForEachCell(0, 3);updateUI(); }
-    public void  cell5(MouseEvent mouseEvent) { fooForEachCell(1, 0);updateUI(); }
-    public void  cell6(MouseEvent mouseEvent) { fooForEachCell(1, 1);updateUI(); }
-    public void  cell7(MouseEvent mouseEvent) { fooForEachCell(1, 2);updateUI(); }
-    public void  cell8(MouseEvent mouseEvent) { fooForEachCell(1, 3);updateUI(); }
-    public void  cell9(MouseEvent mouseEvent) { fooForEachCell(2, 0);updateUI(); }
-    public void cell10(MouseEvent mouseEvent) { fooForEachCell(2, 1);updateUI(); }
-    public void cell11(MouseEvent mouseEvent) { fooForEachCell(2, 2);updateUI(); }
-    public void cell12(MouseEvent mouseEvent) { fooForEachCell(2, 3);updateUI(); }
-    public void cell13(MouseEvent mouseEvent) { fooForEachCell(3, 0);updateUI(); }
-    public void cell14(MouseEvent mouseEvent) { fooForEachCell(3, 1);updateUI(); }
-    public void cell15(MouseEvent mouseEvent) { fooForEachCell(3, 2);updateUI(); }
-    public void  cell0(MouseEvent mouseEvent) { fooForEachCell(3, 3);updateUI(); }
+    private void winMessage() {
+        for(Node n : gridPane.getChildren()){
+            ImageView img = (ImageView) n;
+            img.setImage(images.get(777));
+        }
+    }
+
+    public void  cell1(MouseEvent mouseEvent) { fooForEachCell(0, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell2(MouseEvent mouseEvent) { fooForEachCell(0, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell3(MouseEvent mouseEvent) { fooForEachCell(0, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell4(MouseEvent mouseEvent) { fooForEachCell(0, 3);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell5(MouseEvent mouseEvent) { fooForEachCell(1, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell6(MouseEvent mouseEvent) { fooForEachCell(1, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell7(MouseEvent mouseEvent) { fooForEachCell(1, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell8(MouseEvent mouseEvent) { fooForEachCell(1, 3);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell9(MouseEvent mouseEvent) { fooForEachCell(2, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell10(MouseEvent mouseEvent) { fooForEachCell(2, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell11(MouseEvent mouseEvent) { fooForEachCell(2, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell12(MouseEvent mouseEvent) { fooForEachCell(2, 3);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell13(MouseEvent mouseEvent) { fooForEachCell(3, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell14(MouseEvent mouseEvent) { fooForEachCell(3, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell15(MouseEvent mouseEvent) { fooForEachCell(3, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell0(MouseEvent mouseEvent) { fooForEachCell(3, 3);updateUI(); if (checkWin(array)) winMessage(); }
 
 
+    public boolean checkWin(int[][] array) {
+        var m = 1;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (array[i][j] != m) return false;
+                m++;
+            }
+        }
+        return true;
+    }
 
     public void updateUI() {
         for(Node n : gridPane.getChildren()){
@@ -67,6 +81,7 @@ public class Controller {
             images.put(13, new Image(new FileInputStream("src/sample/images/13.png")));
             images.put(14, new Image(new FileInputStream("src/sample/images/14.png")));
             images.put(15, new Image(new FileInputStream("src/sample/images/15.png")));
+            images.put(777, new Image(new FileInputStream("src/sample/images/777.png")));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
