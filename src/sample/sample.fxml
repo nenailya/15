@@ -1,121 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="157.0" prefWidth="163.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="182.0" prefWidth="271.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <ImageView fitHeight="40.0" fitWidth="40.0">
-
+        <ImageView fx:id="cell000" fitHeight="600.0" fitWidth="900.0" onMouseClicked="#cell000">
+                <image>
+                    <Image url="@images/0.png" />
+                </image>
         </ImageView>
-        <GridPane fx:id="gridPane" prefHeight="158.0" prefWidth="164.0">
+        <GridPane fx:id="gridPane" prefHeight="600.0" prefWidth="600.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" prefWidth="45.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" prefWidth="45.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" prefWidth="45.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" prefWidth="45.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
 
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints maxHeight="43.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="43.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="43.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="43.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
 
             </rowConstraints>
             <children>
-                <ImageView fx:id="cell1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell1" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                    <image>
-                        <Image url="@images/1.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell2" GridPane.columnIndex="1" GridPane.rowIndex="0">
-                    <image>
-                        <Image url="@images/2.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell3" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell3" GridPane.columnIndex="2" GridPane.rowIndex="0">
-                    <image>
-                        <Image url="@images/3.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell4" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell4" GridPane.columnIndex="3" GridPane.rowIndex="0">
-                    <image>
-                        <Image url="@images/4.png" />
-                    </image>
-                </ImageView>
+                <ImageView fx:id="cell1" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell1" GridPane.columnIndex="0" GridPane.rowIndex="0"><image><Image url="@images/1.png" /></image></ImageView>
+                <ImageView fx:id="cell2" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell2" GridPane.columnIndex="1" GridPane.rowIndex="0"><image><Image url="@images/2.png" /></image></ImageView>
+                <ImageView fx:id="cell3" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell3" GridPane.columnIndex="2" GridPane.rowIndex="0"><image><Image url="@images/3.png" /></image></ImageView>
+                <ImageView fx:id="cell4" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell4" GridPane.columnIndex="3" GridPane.rowIndex="0"><image><Image url="@images/4.png" /></image></ImageView>
 
 
 
 
-                <ImageView fx:id="cell5" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell5" GridPane.columnIndex="0" GridPane.rowIndex="1">
-                    <image>
-                        <Image url="@images/5.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell6" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell6" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                    <image>
-                        <Image url="@images/6.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell7" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell7" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                    <image>
-                        <Image url="@images/7.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell8" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell8" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                    <image>
-                        <Image url="@images/8.png" />
-                    </image>
-                </ImageView>
+                <ImageView fx:id="cell5" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell5" GridPane.columnIndex="0" GridPane.rowIndex="1"><image><Image url="@images/5.png" /></image></ImageView>
+                <ImageView fx:id="cell6" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell6" GridPane.columnIndex="1" GridPane.rowIndex="1"><image><Image url="@images/6.png" /></image></ImageView>
+                <ImageView fx:id="cell7" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell7" GridPane.columnIndex="2" GridPane.rowIndex="1"><image><Image url="@images/7.png" /></image></ImageView>
+                <ImageView fx:id="cell8" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell8" GridPane.columnIndex="3" GridPane.rowIndex="1"><image><Image url="@images/8.png" /></image></ImageView>
 
 
 
-                <ImageView fx:id="cell9" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell9" GridPane.columnIndex="0" GridPane.rowIndex="2">
-                    <image>
-                        <Image url="@images/9.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell10" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell10" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                    <image>
-                        <Image url="@images/10.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell11" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell11" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                    <image>
-                        <Image url="@images/11.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell12" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell12" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                    <image>
-                        <Image url="@images/12.png" />
-                    </image>
-                </ImageView>
+                <ImageView fx:id="cell9" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell9" GridPane.columnIndex="0" GridPane.rowIndex="2"><image><Image url="@images/9.png" /></image></ImageView>
+                <ImageView fx:id="cell10" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell10" GridPane.columnIndex="1" GridPane.rowIndex="2"><image><Image url="@images/10.png" /></image></ImageView>
+                <ImageView fx:id="cell11" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell11" GridPane.columnIndex="2" GridPane.rowIndex="2"><image><Image url="@images/11.png" /></image></ImageView>
+                <ImageView fx:id="cell12" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell12" GridPane.columnIndex="3" GridPane.rowIndex="2"><image><Image url="@images/12.png" /></image></ImageView>
 
 
 
-                <ImageView fx:id="cell13" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell13" GridPane.columnIndex="0" GridPane.rowIndex="3">
-                    <image>
-                        <Image url="@images/13.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell14" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell14" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                    <image>
-                        <Image url="@images/14.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell15" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell15" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                    <image>
-                        <Image url="@images/15.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="cell16" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#cell0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                    <image>
-                        <Image url="@images/0.png" />
-                    </image>
-                </ImageView>
+                <ImageView fx:id="cell13" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell13" GridPane.columnIndex="0" GridPane.rowIndex="3"><image><Image url="@images/13.png" /></image></ImageView>
+                <ImageView fx:id="cell14" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell14" GridPane.columnIndex="1" GridPane.rowIndex="3"><image><Image url="@images/14.png" /></image></ImageView>
+                <ImageView fx:id="cell15" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell15" GridPane.columnIndex="2" GridPane.rowIndex="3"><image><Image url="@images/15.png" /></image></ImageView>
+                <ImageView fx:id="cell16" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell0" GridPane.columnIndex="3" GridPane.rowIndex="3"><image><Image url="@images/0.png" /></image></ImageView>
             </children>
         </GridPane>
+    <Button fx:id="help" layoutX="700.0" layoutY="342.0" mnemonicParsing="false" onMouseClicked="#help" prefHeight="50.0" prefWidth="100.0" text=" HELP">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="start" layoutX="700.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#start" text="START">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
 
 
     </children>
