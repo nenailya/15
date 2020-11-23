@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.scene.input.MouseEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
@@ -9,14 +8,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 
-import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
-import static sample.SolverKt.dodo;
 import static sample.smth.*;
 
 public class Controller {
@@ -31,35 +27,37 @@ public class Controller {
         }
     }
 
-    public void cell000(MouseEvent mouseEvent) {}
-    public void  start(MouseEvent mouseEvent) { startState(); updateUI();}
-    public void  cell1(MouseEvent mouseEvent) { fooForEachCell(0, 0);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell2(MouseEvent mouseEvent) { fooForEachCell(0, 1);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell3(MouseEvent mouseEvent) { fooForEachCell(0, 2);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell4(MouseEvent mouseEvent) { fooForEachCell(0, 3);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell5(MouseEvent mouseEvent) { fooForEachCell(1, 0);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell6(MouseEvent mouseEvent) { fooForEachCell(1, 1);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell7(MouseEvent mouseEvent) { fooForEachCell(1, 2);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell8(MouseEvent mouseEvent) { fooForEachCell(1, 3);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell9(MouseEvent mouseEvent) { fooForEachCell(2, 0);updateUI(); if (checkWin(array)) winMessage(); }
-    public void cell10(MouseEvent mouseEvent) { fooForEachCell(2, 1);updateUI(); if (checkWin(array)) winMessage(); }
-    public void cell11(MouseEvent mouseEvent) { fooForEachCell(2, 2);updateUI(); if (checkWin(array)) winMessage(); }
-    public void cell12(MouseEvent mouseEvent) { fooForEachCell(2, 3);updateUI(); if (checkWin(array)) winMessage(); }
-    public void cell13(MouseEvent mouseEvent) { fooForEachCell(3, 0);updateUI(); if (checkWin(array)) winMessage(); }
-    public void cell14(MouseEvent mouseEvent) { fooForEachCell(3, 1);updateUI(); if (checkWin(array)) winMessage(); }
-    public void cell15(MouseEvent mouseEvent) { fooForEachCell(3, 2);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  cell0(MouseEvent mouseEvent) { fooForEachCell(3, 3);updateUI(); if (checkWin(array)) winMessage(); }
-    public void  help(MouseEvent mouseEvent) { System.out.println(dodo()); }
+    public void cell000() {}
+    public void  start() { startState(); updateUI();}
+    public void  cell1() { fooForEachCell(0, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell2() { fooForEachCell(0, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell3() { fooForEachCell(0, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell4() { fooForEachCell(0, 3);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell5() { fooForEachCell(1, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell6() { fooForEachCell(1, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell7() { fooForEachCell(1, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell8() { fooForEachCell(1, 3);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell9() { fooForEachCell(2, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell10() { fooForEachCell(2, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell11() { fooForEachCell(2, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell12() { fooForEachCell(2, 3);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell13() { fooForEachCell(3, 0);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell14() { fooForEachCell(3, 1);updateUI(); if (checkWin(array)) winMessage(); }
+    public void cell15() { fooForEachCell(3, 2);updateUI(); if (checkWin(array)) winMessage(); }
+    public void  cell0() { fooForEachCell(3, 3);updateUI(); if (checkWin(array)) winMessage(); }
+    public void   help() { System.out.println(helper()); updateUI(); if (checkWin(array)) winMessage(); }
+
+    private String helper() {
+        return new Solver().helper();
+    }
+
 
     public void startState(){
-        Random i = new Random();
-        int m = i.nextInt();
-        fooForEachCell(3,2);
-        fooForEachCell(2,2);
-        for (int j = 0; j < m; j++){
-            fooForEachCell(i.nextInt(3), i.nextInt(3));
+        for (int j = 0; j < 200; j++) {
+            int a = (int) ( Math.random() * 4 );
+            int b = (int) ( Math.random() * 4 );
+            fooForEachCell(a, b);
         }
-
     }
 
     public boolean checkWin(int[][] array) {

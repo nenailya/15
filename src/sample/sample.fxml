@@ -56,11 +56,11 @@
                 <ImageView fx:id="cell16" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#cell0" GridPane.columnIndex="3" GridPane.rowIndex="3"><image><Image url="@images/0.png" /></image></ImageView>
             </children>
         </GridPane>
-    <Button fx:id="help" layoutX="700.0" layoutY="342.0" mnemonicParsing="false" onMouseClicked="#help" prefHeight="50.0" prefWidth="100.0" text=" HELP">
+    <Button fx:id="help" layoutX="700.0" layoutY="342.0" mnemonicParsing="false" onMouseClicked="#help" prefHeight="51.0" prefWidth="120.0" text="SOLVER">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button fx:id="start" layoutX="700.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#start" text="START">
+      <Button fx:id="start" layoutX="700.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#start" prefHeight="51.0" prefWidth="113.0" text="START">
          <font>
             <Font size="24.0" />
          </font></Button>
