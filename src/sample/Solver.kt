@@ -3,7 +3,7 @@ package sample
 import sample.smth.array
 import sample.smth.fooForEachCell
 
-class Solver {
+public class Solver {
     val dx = arrayOf(0, -1, 0, 1)
     var resultString = ""
 
@@ -146,7 +146,7 @@ class Solver {
             return res
         }
 
-        fun helper(): String {
+        public fun helper(): String {
             initGoalArray()
             initGoalArrays()
             return if (idaStar()) {
